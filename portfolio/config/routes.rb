@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bio/index'
+
+  get 'accomplishments/index'
+
   resources :posts
 
   root 'welcome#index'

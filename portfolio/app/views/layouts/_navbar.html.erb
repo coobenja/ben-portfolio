@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ben's Web Portfolio</a>
+      <ul class="nav navbar-nav">
+        <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
+        <li role="presentation"><%= link_to 'My Blog', controller: 'posts' %></li>
+        <li role="presentation"><a href="#">Bio</a></li>
+        <li role="presentation"><%= link_to 'Accomplishments', controller: 'accomplishments' %></li>
+        <li role="presentation"><a href="#">Games</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
