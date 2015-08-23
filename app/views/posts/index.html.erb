@@ -1,15 +1,20 @@
-<h1>Listing posts</h1>
-<%= link_to 'New post', new_post_path %>
-<table>
+<h1>My Games</h1>
+
+<button id="resumeButton" type="button" class="btn btn-success">
+<%= link_to 'New post', new_post_path %></button>
+
+<div class="row">
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post_path(post),
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="..." alt="...">
+        <div class="caption">
+          <h2><%= link_to post.title, post_path(post) %></h2>
+        </div>
+        <td><%= link_to 'Destroy', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>
