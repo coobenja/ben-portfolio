@@ -7,7 +7,7 @@
   <% @posts.each do |post| %>
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img src="..." alt="...">
+        <%= image_tag post.avatar.url(:medium) %>
         <div class="caption">
           <h2><%= link_to post.title, post_path(post) %></h2>
         </div>

@@ -1,12 +1,20 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<h1><%= @post.title %></h1>
    
 <p>
-  <strong>Text:</strong>
-  <%= @post.text %>
+  <strong>Description:</strong>
+  <p><%= @post.text %></p>
 </p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Video</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/uf1W1E8Bxuc" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Back', posts_path %>
 <%= link_to 'Edit', edit_post_path(@post) %>
