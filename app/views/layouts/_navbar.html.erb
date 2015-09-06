@@ -9,5 +9,16 @@
         <li role="presentation"><%= link_to 'Accomplishments', accomplishments_index_path %></li>
       </ul>
     </div>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li role="presentation">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Admin Login', new_user_session_path) %>
+          <% end %>
+        </li>
+      </ul>
+    </div> 
   </div>
 </nav>

@@ -2,8 +2,11 @@
   <h1>My Games</h1>
 </div>
 
-<button id="resumeButton" type="button" class="btn btn-success">
-<%= link_to 'New post', new_post_path %></button>
+<% if current_user %>
+  <button id="resumeButton" type="button" class="btn btn-success">
+    <%= link_to 'New post', new_post_path %>
+  </button>
+<% end %>
 
 <div class="row">
   <% @posts.each do |post| %>
@@ -15,9 +18,11 @@
         <div class="caption">
           <h2><%= link_to post.title, post_path(post) %></h2>
         </div>
-        <td><%= link_to 'Destroy', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+          <td><%= link_to 'Destroy', post_path(post),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </div>
     </div>
   <% end %>
