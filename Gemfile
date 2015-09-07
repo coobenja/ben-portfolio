@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'figaro'
+gem 'font-awesome-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
