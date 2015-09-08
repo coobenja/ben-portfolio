@@ -1,5 +1,8 @@
 <div class="page-header">
   <h1><%= @post.title %></h1>
+  <% unless @post.download_link.blank? %>
+    <a id="gameButton" type="button" class="btn btn-primary" href=<% @post.download_link %> >Download Game <span class="glyphicon glyphicon-download-alt"></a>
+  <% end %>
 </div>
    
 <div class="well">
@@ -21,5 +24,8 @@
   </div>
 <% end %>
 
-<%= link_to 'Back', posts_path %>
-<%= link_to 'Edit', edit_post_path(@post) %>
+<% if current_user %>
+  <div class="well">
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  </div>
+<% end %>
