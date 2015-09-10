@@ -3,9 +3,7 @@
 </div>
 
 <% if current_user %>
-  <button id="resumeButton" type="button" class="btn btn-success">
-    <%= link_to 'New post', new_post_path %>
-  </button>
+  <%= link_to 'New post', new_post_path %>
 <% end %>
 
 <div class="row">
