@@ -1,13 +1,13 @@
 <div class="page-header">
   <h1><%= @post.title %></h1>
   <% unless @post.download_link.blank? %>
-    <a id="gameButton" type="button" class="btn btn-primary" href=<% @post.download_link %> >Download Game <span class="glyphicon glyphicon-download-alt"></a>
+    <a id="gameButton" type="button" class="btn btn-primary" href="<%= @post.download_link %>" >Download Game <span class="glyphicon glyphicon-download-alt"></a>
   <% end %>
 </div>
    
 <div class="well">
   <p>
-    <p><%= @post.text %></p>
+    <p><%= @post.text.html_safe %></p>
   </p>
 </div>
 
