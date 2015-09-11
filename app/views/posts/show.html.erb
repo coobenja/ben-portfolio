@@ -22,6 +22,10 @@
       </div>
     </div>
   </div>
+<% else %>
+  <div class="thumbnail">
+    <img src="<%= asset_path(@post.avatar_name) %>" />
+  </div>
 <% end %>
 
 <% if current_user %>
