@@ -6,7 +6,7 @@
   <%= link_to 'New post', new_post_path %>
 <% end %>
 <div class="container">
-  <% @posts.each do |post| %>
+  <% @posts.reverse_each do |post| %>
     <div class="col-sm-12">
       <div class="well clearfix">
         <div class="col-sm-4">
