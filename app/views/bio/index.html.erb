@@ -1,41 +1,76 @@
 <div class="page-header">
-  <h1>About Me</h1>
-  <a id="resumeButton" type="button" class="btn btn-success" href="https://drive.google.com/uc?export=download&id=0BxmXUn4rNtySZ1JGY1FQZ2VLR0E">Download Resume <span class="glyphicon glyphicon-download-alt"></a>
+  <h1 style="display:inline">About Me</h1>
+  <a id="resumeButton" type="button" class="btn btn-success btn-lg" href="https://drive.google.com/uc?export=download&id=0BxmXUn4rNtySZ1JGY1FQZ2VLR0E">Download Resume <span class="glyphicon glyphicon-download-alt"></a>
+  <a type="button" class="btn btn-primary btn-lg" href="/posts">My Games  <i class="fa fa-gamepad"></i></a>
 </div>
 
 <div class="col-sm-3">
 <img src="<%= asset_path( 'Cheese.jpg' ) %>" />
 </div>
 
-
 <div class="col-sm-9">
   <div class="well">
-    <h3>My name is Ben Cooper</h3>
+    <h3>My name is <b>Ben Cooper</b></h3>
     <p>
-      I am a third year student at the University of Michigan College of Engineering, studying Computer Science. I have a passion for the software development process and for making things in general. 
+    I am a third year student at the <b>University of Michigan College of Engineering, studying Computer Science.</b> I have a passion for the software development process and for making things in general. 
+    </p>
+    <p>I have extensive experience with developing software namely in the form of video game development.   Check out some of the games I've developed on<em> <b><%= link_to 'My Games', posts_path %></b></em> page. 
     </p>
     <p>I currently serve as the Events Coordinator for 
-    <a href="http://www.wolverinesoft.org/home">Wolverine Soft.</a>
+    <a href="http://www.wolverinesoft.org/home">Wolverine Soft</a>, the game development student organization at the University of Michigan.
     I contact company representatives, and plan, schedule, and reserve spaces for events. I also arrange and run the social activities at weekly meetings.
     </p>
     <p>
       I am a very self motivated learner. I am also proficient with real world, full stack web development through Ruby on Rails. I developed this website using Ruby on Rails, Devise, and Bootstrap. 
      </p> 
 
-     <p>You can check out the source code and more on my GitHub: <%= link_to image_tag("GitHub-Mark-32px.png"), "https://github.com/coobenja" %></p>
-    </p>
-    <p>I have extensive experience with developing software namely in the form of video game development.   Check out some of the games I've developed on <%= link_to 'My Games', posts_path %> page. 
+     <p>You can check out the source code and more on my <%= link_to "Github Page", "https://github.com/coobenja" %>:  <%= link_to image_tag("GitHub-Mark-32px.png"), "https://github.com/coobenja" %></p>
     </p>
 
+
     <h3>Employment</h3>
-    <p>Full Stack Ruby on Rails Development Intern, Ann Arbor T-shirt Company</p>
-    <p>Virtual Reality Developer, University of Michigan 3D Lab</p>
-    <p>Assistant Game Developer for SCI-Hard, on IOS and Android, University of Michigan 3D Lab in cooperation with C.S. Mott Children's Hospital</p>
+    <ul>
+      <li>
+        Full Stack Ruby on Rails Development Intern, Ann Arbor T-shirt Company
+      </li>
+        <ul>
+          <li>
+            Implemented Ruby on Rails Continuous Integration and deployment environment using GitHub and Travis-CI
+          </li>
+          <li>
+             Developed in a test driven environment using RSpec and Capybara for model, view, controller, and feature specs
+          </li>
+          <li>
+            Implemented third party APIs and gems (libraries) including authentication gem Devise, and auditing gem Public Activity </li>
+        </ul>
+      <li>Virtual Reality Developer, University of Michigan 3D Lab</li>
+        <ul>
+          <li>
+            Using Unreal Engine 4 and the Oculus Rift, developed virtual reality applications for research use</li>
+          <li>
+            Designed an architectural simulation program to be used with vision tracking to improve algorithms
+            used in procedurally generated building plans</li>
+        </ul>
+      <li>
+        Assistant Game Developer for SCI-Hard, on IOS and Android, University of Michigan 3D Lab in cooperation         with C.S. Mott Children's Hospital
+      </li>
+        <ul>
+          <li>
+            Using Unity3D, coded in C#, designed levels, and implemented art, animations, and sounds</li>
+          <li>
+            Developed solutions for and extensively debugged 3+ year old code base
+          </li>
+        </ul>
+    </ul>
 
     <h3>Education</h3>
     <p>University of Michigan, Ann Arbor</p>
     <p>Bachelor of Science in Engineering, Computer Science, 2017 </p>
     <h3>Key Courses</h3>
-    <p>EECS 281: Algorithms and Data Structures, EECS 203: Discrete Math, EECS 280: Programming and Introductory Data Structures</p>
+      <ul>
+        <li>EECS 281: Algorithms and Data Structures</li> 
+        <li>EECS 494: Computer Game Design</li> 
+        <li>EECS 370: Intro to Computer Architecture</li>
+      </ul>
   </div>
 </div>
